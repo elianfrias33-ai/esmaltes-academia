@@ -1,0 +1,30 @@
+.auth { display: grid; min-height: 100svh; }
+.auth__side { position: relative; display: none; overflow: hidden; background: radial-gradient(70% 70% at 70% 30%, #4a3716 0%, #17130c 50%, var(--black) 80%); }
+.auth__side canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.auth__script {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 0 0.2em;
+  font-family: var(--f-script); font-size: clamp(4rem, 8vw, 8rem); line-height: 1.3; white-space: nowrap;
+  background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.auth__side p { position: absolute; left: 0; right: 0; top: calc(50% + clamp(50px, 6vw, 90px)); text-align: center; font-size: 0.72rem; letter-spacing: 0.36em; text-transform: uppercase; color: var(--ivory-2); }
+.auth__panel { display: grid; place-items: center; padding: calc(var(--nav-h) + 30px) var(--gutter) 60px; }
+.auth__box { width: min(100%, 430px); }
+.auth__title { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.8rem, 5vw, 4.2rem); line-height: 1; }
+.auth__lead { margin-top: 10px; color: var(--muted); }
+.auth__links { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 20px; font-size: 0.88rem; }
+.auth__links a { min-height: 32px; color: var(--gold-hi); transition: color 0.3s; }
+.auth__links a:hover { color: var(--ivory); }
+@media (min-width: 900px) { .auth { grid-template-columns: 1fr 1fr; } .auth__side { display: block; } }
+
+.form { display: grid; gap: 16px; margin-top: 26px; }
+.field { display: grid; gap: 6px; }
+.field > span { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 50px; padding: 0 14px; border-radius: 12px; font-size: 1rem;
+  background: var(--black-3); border: 1px solid var(--line-soft); transition: border-color 0.3s;
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--gold); }
+.field small { font-size: 0.74rem; color: var(--muted-2); }
+.form-error { padding: 10px 14px; border-radius: 10px; font-size: 0.88rem; color: var(--danger); background: rgba(238, 154, 154, 0.08); border: 1px solid rgba(238, 154, 154, 0.3); }
+.form-note { margin-top: 18px; padding: 10px 14px; border-radius: 10px; font-size: 0.84rem; color: var(--ivory-2); border: 1px dashed var(--line); }
+.form-ok { padding: 10px 14px; border-radius: 10px; font-size: 0.88rem; color: var(--ok); background: rgba(127, 209, 160, 0.08); border: 1px solid rgba(127, 209, 160, 0.3); }

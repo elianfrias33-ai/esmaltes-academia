@@ -1,0 +1,36 @@
+@import '@fontsource-variable/cormorant/index.css';
+@import '@fontsource-variable/cormorant/wght-italic.css';
+@import '@fontsource-variable/manrope/index.css';
+@import '@fontsource/pinyon-script/400.css';
+
+:root {
+  --black: #0a0907;
+  --black-2: #110f0c;
+  --black-3: #1a1712;
+  --black-4: #26221b;
+  --ivory: #f4ecdf;
+  --ivory-2: #e6dccb;
+  --muted: rgba(244, 236, 223, 0.66);
+  --muted-2: rgba(244, 236, 223, 0.46);
+  --line: rgba(214, 177, 106, 0.24);
+  --line-soft: rgba(244, 236, 223, 0.1);
+  --gold: #d6b16a;
+  --gold-hi: #f3dca0;
+  --gold-deep: #9c7a3c;
+  --gold-grad: linear-gradient(100deg, #9c7a3c 0%, #f3dca0 26%, #c99d4f 48%, #fff1c9 66%, #a8823f 100%);
+  --ok: #7fd1a0;
+  --danger: #ee9a9a;
+
+  --f-display: 'Cormorant Variable', 'Cormorant', Georgia, serif;
+  --f-script: 'Pinyon Script', 'Snell Roundhand', cursive;
+  --f-body: 'Manrope Variable', 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --gutter: clamp(16px, 4vw, 56px);
+  --maxw: 1400px;
+  --radius: 14px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --nav-h: 72px;
+
+  --fs-h2: clamp(2.5rem, 6vw, 5.8rem);
+  --fs-lead: clamp(1rem, 1.2vw, 1.18rem);
+}

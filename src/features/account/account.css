@@ -1,0 +1,29 @@
+.account { max-width: var(--maxw); min-height: 80svh; margin: 0 auto; padding: calc(var(--nav-h) + clamp(40px, 7vh, 80px)) var(--gutter) 90px; }
+.account__head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 20px; }
+.account__actions { display: flex; gap: 10px; }
+.account__h { margin: 44px 0 16px; font-family: var(--f-display); font-weight: 400; font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1; }
+.account__note { color: var(--muted); }
+.account__empty { display: grid; justify-items: start; gap: 14px; padding: 26px; border-radius: var(--radius); border: 1px dashed var(--line); color: var(--ivory-2); }
+.account__grid { display: grid; gap: 10px; }
+@media (min-width: 900px) { .account__grid { grid-template-columns: 1fr 1fr; gap: 6vw; } }
+
+.my-courses { display: grid; gap: 12px; }
+.my-course { display: grid; grid-template-columns: 72px 1fr; gap: 14px; align-items: center; padding: 14px; border-radius: var(--radius); border: 1px solid var(--line-soft); background: var(--black-2); }
+.my-course img { width: 72px; height: 72px; object-fit: cover; border-radius: 10px; }
+.my-course h3 { font-family: var(--f-display); font-weight: 500; font-size: 1.4rem; line-height: 1.1; }
+.my-course p { margin-top: 6px; font-size: 0.8rem; color: var(--muted); }
+.my-course__bar { height: 5px; margin-top: 8px; border-radius: 999px; background: var(--black-4); overflow: hidden; }
+.my-course__bar i { display: block; height: 100%; background: var(--gold-grad); }
+.my-course.is-expired { opacity: 0.7; }
+.my-course__soon { grid-column: 1 / -1; font-size: 0.74rem; color: var(--muted-2); }
+.my-course > .btn { grid-column: 1 / -1; }
+@media (min-width: 700px) {
+  .my-course { grid-template-columns: 72px 1fr auto; }
+  .my-course > .btn, .my-course__soon { grid-column: auto; }
+}
+
+.history { display: grid; gap: 8px; }
+.history li { display: flex; justify-content: space-between; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line-soft); }
+.history b { display: block; font-weight: 600; font-size: 0.92rem; }
+.history span { font-size: 0.76rem; color: var(--muted); }
+.history strong { font-family: var(--f-display); font-weight: 500; font-size: 1.3rem; color: var(--gold-hi); font-variant-numeric: lining-nums; }

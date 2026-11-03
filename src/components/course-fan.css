@@ -1,0 +1,35 @@
+.fan-block { position: relative; max-width: 1240px; margin: 20px auto 0; }
+.fan { position: relative; height: clamp(320px, 44vw, 500px); touch-action: pan-y; overflow: visible; }
+.fan__card {
+  --w: clamp(180px, 23vw, 300px);
+  position: absolute; left: 50%; top: 14px; width: var(--w); margin-left: calc(var(--w) / -2); aspect-ratio: 3 / 4; overflow: hidden; text-align: left;
+  border-radius: 14px; background: var(--black-3); border: 1px solid var(--line-soft); transform-origin: 50% 100%;
+  box-shadow: 0 30px 50px -24px rgba(0, 0, 0, 0.9); transition: border-color 0.5s, box-shadow 0.6s; will-change: transform;
+}
+.fan__card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(0.7) brightness(0.62); transition: filter 0.6s, transform 1.2s var(--ease); }
+.fan__shade { position: absolute; inset: 40% 0 0; background: linear-gradient(180deg, transparent, rgba(10, 9, 7, 0.92)); }
+.fan__label { position: absolute; left: 16px; right: 16px; bottom: 14px; font-family: var(--f-display); font-size: clamp(1.1rem, 1.7vw, 1.6rem); font-weight: 500; line-height: 1.05; }
+.fan__card:hover img { filter: saturate(0.9) brightness(0.8); }
+.fan__card.is-on { border-color: var(--gold); box-shadow: 0 40px 70px -26px rgba(214, 177, 106, 0.55), 0 0 0 1px rgba(214, 177, 106, 0.4); }
+.fan__card.is-on img { filter: none; transform: scale(1.04); }
+.fan__nav { display: flex; justify-content: center; gap: 10px; margin-top: 4px; }
+.fan__arrow { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); color: var(--gold-hi); transition: background 0.3s, color 0.3s; }
+.fan__arrow:hover { background: var(--gold); color: var(--black); }
+
+.pick { display: grid; gap: 22px; margin-top: 26px; padding-top: 26px; border-top: 1px solid var(--line-soft); }
+.pick__name { font-family: var(--f-display); font-weight: 400; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1; }
+.pick__subtitle { margin-top: 8px; color: var(--muted); }
+.pick__meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.pick__meta li { padding: 7px 13px; border: 1px solid var(--line-soft); border-radius: 999px; font-size: 0.74rem; color: var(--ivory-2); }
+.pick__buy { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 18px; }
+.pick__price small { display: block; margin-bottom: 6px; font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+.pick__price span { font-family: var(--f-display); font-size: clamp(2.6rem, 4.6vw, 4rem); line-height: 1; color: var(--gold-hi); font-variant-numeric: lining-nums; }
+@media (min-width: 900px) {
+  .pick { grid-template-columns: 1fr auto; align-items: end; }
+  .pick__buy { gap: 36px; flex-wrap: nowrap; }
+}
+@media (max-width: 700px) {
+  .fan { height: 330px; overflow-x: clip; overflow-y: visible; }
+  .fan__card { --w: 50vw; }
+  .pick__buy .btn { flex: 1 1 100%; }
+}
